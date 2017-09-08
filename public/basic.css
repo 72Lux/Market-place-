@@ -1,0 +1,415 @@
+<style>
+    
+/* item popup Css Elements */
+
+.shoppable-item-top-container, .shoppable-cart-top-container{
+    z-index:8;
+    position:fixed;
+    top:10px;
+    bottom:10px;
+    right:10px;
+    left:10px;
+}
+.shoppable-item-container{ 
+   font-weight: 500 !important;
+   font-family: 'Neue Helvetica W01', sans-serif !important;
+   color: #000 !important;
+  font-size: .75em !important;
+}
+    
+
+
+/* item popup general elments  */
+
+.shoppable-cart-open-button{
+    
+}
+.shoppable-item-container label{
+    
+}
+
+.shoppable-item-container h3{
+    
+    
+}
+
+.shoppable-item-container h2{
+    
+    
+}
+
+.shoppable-item-container h1{
+    
+    
+}
+
+.shoppable-item-container img{
+    max-width:200px;
+    
+}
+
+#warning{
+    
+}
+
+
+/* item popup spefic elments  */
+
+.shoppable-item-close-button{
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    padding: 5px 8px;
+    cursor: pointer; 
+    color:black;
+    z-index:6;
+    
+}
+.shoppable-item-closeButton-X-text{
+    
+}
+
+.shoppable-item-closeButton-close-text{
+        
+}
+
+.shoppable-item-image-td{
+    width:30%;
+}
+
+.shoppable-item-list-container{
+    height:500px;
+    overflow:auto;
+    background-color:white;
+}
+.shoppable-item-info-table{
+    width: 100%;
+    margin-bottom: 10px;
+    
+}
+.shoppable-item-image-container{
+    
+    width:100%;
+}
+
+.shoppable-item-product-brand{
+    
+}
+.shoppable-item-product-image{
+    
+}
+
+.shoppable-item-product-name {
+    
+    
+}
+.shoppable-item-product-description{
+    
+    
+}
+.shoppable-item-merchant-group-label{
+    
+}
+
+.shoppable-item-merchant-group-select{
+    
+}
+.shoppable-item-merchant-group-option{
+    
+}
+
+
+.shoppable-item-color-group-container{
+    
+    
+}
+
+.shoppable-item-color-group-label{
+    
+    
+}
+
+.shoppable-item-color-group-select{
+    
+}
+
+.shoppable-item-color-group-option{
+    
+}
+/* only appears when the products are in merchant group mode */
+.shoppable-merchant-color-container{
+    
+}
+
+.shoppable-merchant-color-label{
+    
+}
+.shoppable-merchant-color-select{
+  width: 130px;  
+    display:block
+}
+.shoppable-merchant-color-option{
+    
+}
+/* end merchant group */
+
+/* only appears when products are in color group mode */
+.shoppable-color-merchant-container{
+    
+    
+}
+
+.shoppable-color-merchant-label{
+    
+}
+.shoppable-color-merchant-select{
+  width: 130px;  
+    display:block
+}
+.shoppable-color-merchant-option{
+    
+}
+/* end color group */
+
+.shoppable-item-size-selection-td{
+
+}
+    .shoppable-out-of-stock-container{
+        
+    top: 100px;
+    position: relative;
+    }
+
+.shoppable-item-size-selection-container{
+    
+    
+}
+
+.shoppable-item-size-selection-label{
+    
+}
+.shoppable-item-size-selection-select{
+  width: 130px;  
+    display:block
+}
+.shoppable-item-size-selection-option{
+    
+}
+
+
+
+shoppable-item-qty-selection-td{
+
+}
+
+
+.shoppable-item-qty-selection-container{
+    
+    
+}
+
+.shoppable-item-qty-selection-label{
+    
+}
+.shoppable-item-qty-selection-select{
+  width: 130px;  
+    display:block
+}
+.shoppable-item-qty-selection-option{
+    
+}
+
+.shoppable-item-price-add-td{
+    
+}
+
+.shoppable-item-price-label{
+    
+}
+
+.shoppable-item-price-number{
+    
+}
+.shoppable-item-add-button{
+    
+}
+
+
+
+
+/* checkout popup Css Elements */
+
+.cart-tab{
+    width:70%;
+    padding-left: 9px;
+    padding-top: 6px;
+   
+}
+
+.shoppable-cart-top-container{
+    margin-left: 0px!important;
+    width: 350px!important;
+   
+    overflow: auto;
+    left:initial!important;
+    right:0px!important;
+  
+    
+}
+
+.shoppable-checkout-container{
+   -webkit-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) .6s;
+  -moz-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) .6s;
+  -o-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) .6s;
+  transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) .6s;
+    position: relative;
+    right:0px;
+    /*top:0px*/
+    background-color:white;
+}
+
+.shoppable-checkout-close-button-container{
+    
+    
+}
+.shoppable-checkout-close-button{
+    position: relative;
+    left: 74%;
+
+    
+}
+.shoppable-lightbox-container{
+       position:fixed;
+       top : 0px;
+    bottom:0px;
+    left:0px;
+    right:0px;
+    width:100%;
+    height:100%;
+    z-index:5;
+    background-color:#252525;
+    opacity:.8;
+}
+    
+
+.shoppable-checkout-close-button-x-text{
+    
+    
+}
+.shoppable-checkout-close-button-close-text{
+    position: relative;
+    top: -15px;
+}
+
+.shoppable-checkout-cart-info-container {
+        margin-bottom: 15px;
+        margin-left:20px;
+}
+.shoppable-checkout-cart-info-your-cart-text{
+    
+}
+.shoppable-checkout-cart-info-total-text{
+    
+}
+.shoppable-checkout-cart-info-items-text{
+    
+}
+.shoppable-checkout-items-container-cover{
+    max-height:500px;
+    overflow: auto;
+     border-top-style: solid;
+    border-bottom-style: solid;
+    
+}
+.shoppable-checkout-items-container-main{
+       
+    
+}
+.shoppable-checkout-items-container-sub{
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+}
+.shoppable-checkout-items-image-container{
+    
+}
+.shoppable-checkout-items-image{
+    width:85px;
+}
+.shoppable-checkout-items-container{
+    
+    
+}
+.shoppable-checkout-items-brand{
+    font-size:.75em;
+    font-weight:400;
+}
+.shoppable-checkout-items-name{
+    font-size:.8em;
+    font-weight:600;
+    top: -30px;
+    position: relative;
+}
+.shoppable-checkout-items-color{
+    font-size:.75em;
+    font-weight:400;
+    top: -30px;
+    position: relative;
+    
+}
+.shoppable-checkout-items-qty-container{
+    
+}
+.shoppable-checkout-items-qty-label{
+    
+}
+.shoppable-checkout-items-qty-select{
+    width: 130px;
+}
+
+.shoppable-checkout-items-qty-option{
+    
+}
+.shoppable-checkout-price-remove-container{
+    
+}
+.shoppable-checkout-items-price{
+    
+}
+.shoppable-checkout-items-remove-container{
+    
+}
+
+.shoppable-checkout-items-remove-button{
+    font-size: .75em;
+    right: 29px;
+    top: 28px;
+}
+.shoppable-checkout-button{
+        margin-top: 10px;
+    left: 20%;
+    color: red;
+}
+    
+.shoppable-view-cart-button{
+    margin-top: 10px;
+    left: 20%;
+    color: red;
+}
+
+/* cart animations */
+
+
+.shoppable-checkout-container.ng-hide-add,
+.shoppable-checkout-container.ng-hide-remove {
+  display:block!important;
+}
+.shoppable-checkout-container.ng-hide {
+  
+    right:-350px;  
+    /*top:-900px*/
+}
+
+
+    
+    </style>

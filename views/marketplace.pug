@@ -1,0 +1,43 @@
+html
+    header 
+        meta(name="viewport", content="width=device-width, initial-scale=1")
+        if stylesheet
+            link(rel="stylesheet", href=stylesheet)
+        link(rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css")
+        link(rel="stylesheet",href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css")
+        link(rel="stylesheet",href="/basic.css")
+        style.  
+            .shoppable-cart-top-container, .md-scroll-mask{
+                position:relative;
+                left:200000;
+            }
+            img{
+                max-height:246px;
+            }
+    body
+        div(ng-controller="marketplaceController",ng-app="MarketPlace",  ng-init="merchantFilter='"+merchantFilter+"'; brandFilter='"+brandFilter+"';token='"+token+"';cartId='"+cartId+"';", ng-cloak) 
+            div(ng-show="findingProducts")     loading Market place
+                mg-progress-circular(md-diameter="120")
+            
+            div(layout="row",layout-wrap)
+                md-card(flex-gt-md="15",flex-gt-xs="20",flex-xs="100"  ng-repeat="product in products", layout="column", ng-show="product.upc")
+                    img(ng-src="{{product.image[0]}}",)
+                    md-card-title
+                        span(class="md-headline") {{product.name}}  
+                        
+                       
+                    md-card-content
+                        span(class="md-subhead") {{product.price}}
+                      
+                        
+                    md-card-actions(layout="row",layout-xs="column", layout-align="end center")
+                        md-button(ng-click="buy(product.upc)",class="md-raised") Buy Now
+                        md-button(ng-click="view(product.url2)",class="md-raised") Quick View
+                            
+    
+    script(src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js")
+    script(src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js")
+    script( src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js")
+    script(src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js")
+    script(src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js")
+    script(src="/marketPlaceController.js")

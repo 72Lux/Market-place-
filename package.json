@@ -1,0 +1,13 @@
+{
+  "name": "marketplace",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "*",
+    "pug": "*",
+    "request": "^2.81.0"
+  }
+}
