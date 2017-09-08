@@ -1,25 +1,9 @@
 (function() {
-  var app, config, express, getCatalogFromFrames, getProducts, http, path, request, server;
+  var config, getProducts, request;
 
-  express = require('express');
+  config = require('./../config');
 
   request = require('request');
-
-  http = require('http');
-
-  path = require('path');
-
-  config = require(path.join(__dirname, 'config'));
-
-  app = module.exports = express();
-
-  app.use(express["static"](__dirname + '/public'));
-
-  app.set('views', __dirname + '/views');
-
-  app.set('view engine', 'pug');
-
-  app.set('port', 5550);
 
   getProducts = function(token, part_number) {
     return new Promise(function(resolve, reject) {
@@ -38,7 +22,7 @@
     });
   };
 
-  getCatalogFromFrames = function(token, data) {
+  exports.getCatalogFromFrames = function(token, data) {
     return new Promise(function(resolve, reject) {
       var url;
       url = config.framesurl + '/v3/catalog?rows=25';
@@ -89,31 +73,5 @@
       });
     });
   };
-
-  app.get('/marketPlace/token/:token', function(req, res) {
-    var data;
-    data = {};
-    data.productGroup = req.query.productGroup ? req.query.productGroup : '';
-    data.token = req.params.token;
-    data.merchantFilter = req.query.merchantFilter ? req.query.merchantFilter : '';
-    data.brandFilter = req.query.brandFilter ? req.query.brandFilter : '';
-    data.stylesheet = req.query.stylesheet ? req.query.stylesheet : '';
-    console.log(data);
-    return res.render('marketplace', data);
-  });
-
-  app.get('/marketPlaceProducts/token/:token', function(req, res) {
-    var data;
-    data = {};
-    data.merchantFilter = req.query.merchantFilter;
-    data.brandFilter = req.query.brandFilter;
-    return getCatalogFromFrames(req.params.token, data).then(function(data) {
-      return res.json(data);
-    });
-  });
-
-  server = http.createServer(app).listen(app.get('port'), function() {
-    return console.log('running');
-  });
 
 }).call(this);

@@ -8,6 +8,7 @@
   "dependencies": {
     "express": "*",
     "pug": "*",
+    "body-parser": "*",
     "request": "^2.81.0"
   }
 }
