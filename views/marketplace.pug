@@ -21,7 +21,7 @@ html
             
             div(layout="row",layout-wrap)
                 md-card(flex-gt-md="15",flex-gt-xs="20",flex-xs="100"  ng-repeat="product in products", layout="column", ng-show="product.upc")
-                    img(ng-src="{{product.image[0]}}",)
+                    img(ng-src="{{product.image}}",)
                     md-card-title
                         span(class="md-headline") {{product.name}}  
                         
